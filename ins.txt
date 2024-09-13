@@ -1,0 +1,12 @@
+-télécharger scoop 
+--Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+
+-installer unzip
+--scoop install unzip
+
+-installer laravel installer 
+--composer global require laravel/installer
+
+-creer le projet 
+--laravel new example-app
