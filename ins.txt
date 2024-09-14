@@ -10,3 +10,15 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
 -creer le projet 
 --laravel new example-app
+
+
+-------PREMIER MODIFICATION DE L'APPLICATION INIT
+
+-démarrage du server 
+--php artisan serve 
+
+-creation d'un page 
+--creer la vue
+--creer le endpoint et la vue visé dans route
+
+
