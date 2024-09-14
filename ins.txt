@@ -64,6 +64,20 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
 
 
+--------------------------les views
+affichage des donnée - interaction with user - récupère les donnée de L'utilisateur
+
+--regrouper les fichier par groupe
+
+--utiliser la facade View dans controller
+
+-- passer des variable partout dans provider
+
+
+
+
+
+
 
 
 

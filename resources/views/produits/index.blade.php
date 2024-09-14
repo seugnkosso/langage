@@ -7,9 +7,15 @@
 </head>
 <body>
     <h1>Products page</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, quidem maxime illum quibusdam ea reprehenderit at vel amet ab aliquid libero unde consequatur atque. Enim non fugit dicta dolore odit.</p>
-    <hr>
+    <h2>Salut, {{$name ?? ''}}</h2>
+    <h3>Categorie: {{$category ?? ''}}</h3>
+    <ul>
+        @foreach ($produits as $produit)
+            <li>{{$produit}}</li>
+        @endforeach
+    </ul>
 
+    {{$global_var}}
     <footer>&copy; kosso beau 2024</footer>
 </body>
 </html>
