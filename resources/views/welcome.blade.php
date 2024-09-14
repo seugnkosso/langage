@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="text-red-300">welcome page</h1>
+    <h1 class="text-red-600 text-4xl">hello {{$name ?? ''}}</h1>
     <ul>
         <li><a href="{{route('home')}}">Home</a></li>
         <li><a href="{{route('about', 12)}}">about</a></li>

@@ -75,6 +75,100 @@ affichage des donnée - interaction with user - récupère les donnée de L'util
 
 
 
+-------------blade template engine - interpolation
+--affichage contenu
+-{{$nom}}
+
+--ecrire du scripte php
+-{{ time()}}
+
+--blade et javascripte
+-@{{ nom }}
+
+--json rendering - passage array  php a javascripte
+-<script>
+    var app = @php echo json_encode($nom) @endphp;
+    console.log(app)
+</script>
+-<script>
+    var app =  {{Illuminate\Support\Js::from($array)}}
+    console.log(app)
+</script>
+-<script>
+    var app =  {{Js::from($array)}}
+    console.log(app)
+</script>
+
+--calcule
+{{ 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1 + 1}}
+
+--directive - condition
+-@if  @else @elseif @endif
+
+--function est défini ou vide
+-isset()
+
+--vide
+-empty()
+
+--si utilisateur est connecter
+-@auth
+ @endauth
+
+--si utilisateur n'est pas connecter
+-@guest
+ @endguest
+
+-- si on est en production
+-@production
+ @endproduction
+
+--si en environnement
+-@env
+ @endenv
+
+ --choix d'un cas
+-@switch($test)
+  @case('one')
+    <p>kosso</p>
+    @break
+  @default
+ @endswitch
+
+--boucle
+-@for @foreach @while @forelse
+ @enfor @endforeach @endwhile @forelse
+
+--arréter ou sauter une itération
+-@continue @break
+
+--balise php
+-@php
+
+--classe ou style dépendant des valeur php
+-@classe({
+    'p-4',
+    'font-bold' => $isActive,
+ })
+
+-@style({
+    color : red => $isActive
+ })
+
+--les attribut html
+-@required @selected @checked , etc...
+
+--les inclusion
+-@include('nomdossier.nomfichier)
+
+--
+
+
+
+
+
+
+
 
 
 
