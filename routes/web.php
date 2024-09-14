@@ -1,17 +1,19 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// nommage des routes
+Route::get('/',[HomeController::class,'home'])->name('home');
+Route::get('/products',[ProductController::class,'index'])->name('products');
+Route::get('/about/{id}',[AboutController::class,'showAbout'])->name('about');
 
-// creer un routeur get  
-Route::get('/hello',function(){
-    return view('hello');
-});
+// Route::get('/',[HomeController::class,'home']);
 
-// Route avec paramettre
-Route::get('/hello/{id}',function($id){
-    return view('hello',['user_id'=>$id]);
-});
+// importer la fonction du controller
+// Route::get('/products',[ProductController::class,'index']);
+
+// ajout de parametre
+// Route::get('/about/{id}',[AboutController::class,'showAbout']);

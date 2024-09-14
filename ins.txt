@@ -29,4 +29,14 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 -{{-- affichage de la variable $user_id --}}
 
 
+-----les controlleurs
+-unité central - la logique - chef d'orcestre
+--creer un controlleurs
+-php artisan make:controller nomController
+-php artisan make:controller ProductController
+--relier controller et route
+-// importer la fonction du controller dans le route
+--utilisation des lien
+--// ajout de parametre
+--// nommage des route
 
