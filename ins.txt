@@ -40,3 +40,32 @@ Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 --// ajout de parametre
 --// nommage des route
 
+------installation de tailwind css et flowbite
+
+--instaler nodeJS
+-scoop install nodeJS
+
+--cmd installation
+-npm install -D tailwindcss postcss autoprefixer flowbite
+
+--creer le fichier de config tailwindcss
+-npx tailwindcss init -p
+
+--remplir tailwind.config.js
+
+--remplir ./resources/css/app.css
+
+--ajouter le css et js dans head
+-@vite('resources/css/app.css')
+-@vite('resources/css/app.js')
+
+--lancer le server
+-npm run dev
+
+
+
+
+
+
+
+
