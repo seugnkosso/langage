@@ -1,24 +1,32 @@
--télécharger scoop 
+-télécharger scoop
 --Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
 
 -installer unzip
 --scoop install unzip
 
--installer laravel installer 
+-installer laravel installer
 --composer global require laravel/installer
 
--creer le projet 
+-creer le projet
 --laravel new example-app
 
 
 -------PREMIER MODIFICATION DE L'APPLICATION INIT
 
--démarrage du server 
---php artisan serve 
+-démarrage du server
+--php artisan serve
 
--creation d'un page 
+-creation d'un page
 --creer la vue
 --creer le endpoint et la vue visé dans route
+
+
+---------les routes
+-représemtent les URL
+-// creer un routeur get
+-// Route avec paramettre
+-{{-- affichage de la variable $user_id --}}
+
 
 

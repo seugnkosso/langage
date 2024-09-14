@@ -6,7 +6,8 @@
     <title>hello</title>
 </head>
 <body>
-    <h1>Hello</h1>
+    {{-- affichage de la variable $user_id --}}
+    <h1>Hello {{$user_id??''}}</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, quidem maxime illum quibusdam ea reprehenderit at vel amet ab aliquid libero unde consequatur atque. Enim non fugit dicta dolore odit.</p>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, quidem maxime illum quibusdam ea reprehenderit at vel amet ab aliquid libero unde consequatur atque. Enim non fugit dicta dolore odit.</p>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, quidem maxime illum quibusdam ea reprehenderit at vel amet ab aliquid libero unde consequatur atque. Enim non fugit dicta dolore odit.</p>
