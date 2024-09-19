@@ -163,6 +163,36 @@ affichage des donnée - interaction with user - récupère les donnée de L'util
 
 --
 
+--------------------------views template blade component-layout
+--composents
+-interface réutilisable
+
+--cmd php artisan make:component NomComponents
+
+--mettre mon html dans le composent
+
+--importer le composent dans n'importe quel html
+-x-NomComposent
+
+--y mettre des variables
+
+--layout
+-fichier html de base
+
+--creer une place libre dans le layout
+-@yield('content')
+
+--importer le layout main
+-@extends('layout.main')
+
+--mettre le content dans la section libre du layout
+-@section('name')
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolor vero at ullam fugiat voluptates quis, dolorem minima rerum? Qui dolores aliquid vel beatae quos sint in assumenda autem perspiciatis.</p>
+ @endsection
+
+
+
+
 
 
 

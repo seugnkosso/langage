@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello</title>
-</head>
-<body>
-    <h1>about page {{$id ?? ''}}</h1>
+
+    <x-base.header title="about"/>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, quidem maxime illum quibusdam ea reprehenderit at vel amet ab aliquid libero unde consequatur atque. Enim non fugit dicta dolore odit.</p>
     <hr>
 
