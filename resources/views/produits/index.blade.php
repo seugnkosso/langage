@@ -1,5 +1,5 @@
     <x-base.header title="liste des produits"/>
-
+    <a href="{{route('product.create')}}" class="text-blue-600 text-2xl:">create produit</a>
     <ul>
         @foreach ($produits as $produit)
             <li>{{$produit}}</li>

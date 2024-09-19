@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function home(){
+    // Utiliser la classe Request pour intercepter les requète
+    public function home(Request $request){
         $name = "kosso";
         return view('welcome',['name' => $name]);
     }

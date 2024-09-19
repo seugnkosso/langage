@@ -193,6 +193,17 @@ affichage des donnée - interaction with user - récupère les donnée de L'util
 
 
 
+--------------------------------------les http request
+-l'interception des requetes http dans les controller
+
+--récuperer les élément d'un formulaire
+-creer un route qui affiche les formulaire dans le controller
+-creer un route qui récupère les données
+-$request->all(), $request->input('nom'), $request->collect(), $request->date('creation'), $request->only('nom'), $request->except('nom').
+
+
+
+
 
 
 
