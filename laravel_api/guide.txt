@@ -5,4 +5,21 @@
 -php artisan make:model NomModel --all
 -en meme temps il crée tout les autre (les controller....)
 
+-------------------formation des models , migration, factories(faker) et les seeders
+--les relation entre model
+
+--creation des attributs dans les migrations
+
+--creer les faker dans les factories
+
+--appeler les seeder dans le database
+
+--appeler tous les seeser dans le database seeder
+
+--faire la migration des table
+-php artisan migrate
+
+--faire la migration des fake donnée
+-php artisan db:seed
+
 
