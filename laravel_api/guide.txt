@@ -37,6 +37,9 @@
 --creer les collection
 -php artisan make:resource NomCollection
 
+--------------introduction au filtres de donnée
+--creer les services
+
 
 
 
