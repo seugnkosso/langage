@@ -40,6 +40,9 @@
 --------------introduction au filtres de donnée
 --creer les services
 
+--------------filtre réutilisable
+--renommer le services en filters
+
 
 
 
