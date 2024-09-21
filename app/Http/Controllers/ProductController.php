@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ValidatorMake;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\View;
 
 class ProductController extends Controller
@@ -40,8 +42,37 @@ class ProductController extends Controller
     public function create(){
         return view('produits.store');
     }
-    public function store(Request $request){
-        dd($request->all());
+    public function store(ValidatorMake $request){
+        // dd($request->all());
+        // $request->validate(
+        //     [
+        //     'nom' =>'required|min:3',
+        //     'prix' =>'required|numeric',
+        //     'description' =>'required'
+        //     ],
+        //     [
+        //         'nom.required' => 'Le nom est obligatoire',
+        //         'nom.min' => 'Le nom doit contenir au moins 3 caractères',
+        //         'prix.required' => 'Le prix est obligatoire',
+        //         'prix.numeric' => 'Le prix doit être un nombre',
+        //         'description.required' => 'La description est obligatoire'
+        //     ]
+        // );
+
+        // $validate = Validator::make($request->all(),
+        //     [
+        //     'nom' => 'required|min:3',
+        //     ],
+        //     [
+        //     'nom.required' => 'Le nom est obligatoire',
+        //     'nom.min' => 'Le nom doit contenir au moins 3 caractères',
+        //     ]
+        // );
+
+        // if($validate->fails()){
+        //     return redirect()->back()->withErrors($validate->errors())->withInput();
+        // }
+
         return view('produits.store');
     }
     public function edit($id){

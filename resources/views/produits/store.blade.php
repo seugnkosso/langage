@@ -3,10 +3,18 @@
 <h1>formulaire de connexion</h1>
 <form action="{{route('product.store')}}" method="POST">
     @csrf
+    {{-- @if ($errors->any())
+        @foreach ($errors->all() as $item)
+            {{ $item}}
+        @endforeach
+    @endif --}}
     <div class="">
-        <input type="text" name="nom" placeholder="nom Produit">
+        <input type="text" name="nom" placeholder="nom Produit" value="{{old('nom')}}">
         <input type="text" name="prix" placeholder="prix produit">
     </div>
+    @error('nom')
+        <small class="text-red-500">{{$message}}</small>
+    @enderror
     <br>
     <div class="">
         <p>produit neuf</p>
@@ -15,6 +23,10 @@
     <br>
     <div class="">
         <input type="datetime-local" name="expiration">
+    </div>
+    <br>
+    <div class="">
+        <input type="file" name="photo">
     </div>
     <br>
     <div class="">

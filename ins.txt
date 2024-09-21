@@ -224,6 +224,17 @@ affichage des donnée - interaction with user - récupère les donnée de L'util
 --// return response()->file(); on peut retourner du file
 
 
+------------------------------------validation des formulaire
+--$request->validate()
+
+--garder l'ancien saisi avec old()
+
+--creer un request
+-php artisan make:request NomRequest
+-l'injecter dans la fonction du controller
+
+
+
 
 
 
