@@ -23,3 +23,20 @@
 -php artisan db:seed
 
 
+-------------------------versioning et retour des premiers ressources
+--placer les controller dans leur version
+
+--grouper les route dans un meme préfix et namespaces
+
+
+----------------------resource et collection
+
+--creer des fichier resource ou dto
+-php artisan make:resource NomResource
+
+--creer les collection
+-php artisan make:resource NomCollection
+
+
+
+
