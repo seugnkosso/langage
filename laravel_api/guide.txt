@@ -1,0 +1,8 @@
+------------------------database preparation et creation des modèl
+--paramettrer avec .env fichier
+
+--creer les model
+-php artisan make:model NomModel --all
+-en meme temps il crée tout les autre (les controller....)
+
+
