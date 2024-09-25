@@ -19,7 +19,7 @@ import java.util.List;
 @Inheritance(strategy = InheritanceType.JOINED) // dire la classe est a hérité et comment sont formé les table de la bd
 @DiscriminatorColumn(name = "type")
 @DiscriminatorValue(value = "user")
-public class User extends AbstractEntity {
+public class AppUser extends AbstractEntity {
 
     @Column(unique = true, nullable = false)
     protected String nomComplet;
@@ -42,6 +42,6 @@ public class User extends AbstractEntity {
             joinColumns = @JoinColumn(name ="user_id"),
             inverseJoinColumns =@JoinColumn(name = "role_id")
     )
-    protected List<Role> listrole = new ArrayList<>();
+    protected List<Role> listRole = new ArrayList<>();
 
 }

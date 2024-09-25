@@ -1,6 +1,6 @@
 package Gestion_stock.data.entities;
 
-import Gestion_stock.security.data.entities.User;
+import Gestion_stock.security.data.entities.AppUser;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @DiscriminatorValue("vendeur") // sa valeur dans la table User
-public class Vendeur extends User{ //étendre User pour qui hérite lui meme abstractEntity
+public class Vendeur extends AppUser { //étendre User pour qui hérite lui meme abstractEntity
 
     @ManyToOne
     private Magasin magasin;

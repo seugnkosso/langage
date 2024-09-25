@@ -24,4 +24,7 @@ public class Vente extends AbstractEntity{ //étendre abstractEntity pour pour h
 
     @ManyToOne
     private Client client;
+
+    @ManyToOne
+    private Vendeur vendeur;
 }

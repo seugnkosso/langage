@@ -46,3 +46,16 @@
   -----------------------mise en place des reôsitories
   ------dans src/main/java/Gestion_stock/data/repositories
 
+  ----------mise en place de la sécurity
+  ---creer la class passwordEncoder
+  --dans src/main/java/Gestion_stock/security/config/PasswordEncoderConfig.java
+  -pour encoder les password
+
+ ---creer la class jwtFilter
+ --dans src/main/java/Gestion_stock/security/config
+
+ ---ajouter les dépendance dans pom.xml
+
+ ---creer JwtService
+ --dans
+

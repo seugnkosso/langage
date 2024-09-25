@@ -18,5 +18,5 @@ public class Role extends AbstractEntity {
     private String roleName;
 
     @ManyToMany(fetch = FetchType.LAZY,mappedBy = "listRole")
-    private List<User> users;
+    private List<AppUser> appUsers;
 }
