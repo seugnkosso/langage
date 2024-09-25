@@ -42,3 +42,7 @@
   ------------------réalisation des relation entre entités
   ---
 
+
+  -----------------------mise en place des reôsitories
+  ------dans src/main/java/Gestion_stock/data/repositories
+
