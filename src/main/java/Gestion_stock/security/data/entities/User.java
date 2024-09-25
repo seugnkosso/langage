@@ -7,6 +7,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table
 @Data
@@ -32,5 +35,13 @@ public class User extends AbstractEntity {
 
     @Column(nullable = false)
     protected String password;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(name ="user_id"),
+            inverseJoinColumns =@JoinColumn(name = "role_id")
+    )
+    protected List<Role> listrole = new ArrayList<>();
 
 }

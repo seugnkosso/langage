@@ -1,11 +1,11 @@
 package Gestion_stock.data.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Entity //dire que la classe est une entité
 @Table //dire la classe est une table a la db
@@ -29,4 +29,13 @@ public class Produit extends AbstractEntity{ //étendre abstractEntity pour pour
     private Long prixVente;
     @Column
     private Long prixVenteMin;
+
+    @OneToMany(mappedBy = "produit")
+    private List<DetailPanier> listDetailPanier;
+
+    @OneToMany(mappedBy = "produit")
+    private List<DetailVente> listDetailVente;
+
+    @ManyToOne
+    private Magasin magasin;
 }

@@ -2,6 +2,7 @@ package Gestion_stock.data.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,4 +18,10 @@ public class DetailPanier extends AbstractEntity{ //étendre abstractEntity pour
     private Long qte;
     @Column
     private Long total;
+
+    @ManyToOne
+    private Panier panier;
+
+    @ManyToOne
+    private Produit produit;
 }

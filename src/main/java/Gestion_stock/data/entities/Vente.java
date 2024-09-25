@@ -21,4 +21,7 @@ public class Vente extends AbstractEntity{ //étendre abstractEntity pour pour h
 
     @Column
     private Long total;
+
+    @ManyToOne
+    private Client client;
 }
