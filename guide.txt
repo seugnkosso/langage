@@ -1,0 +1,12 @@
+-----------------création d'un projet spring
+  --dans spring initialiser https://start.spring.io/
+  --ajouter les dépendance de base
+  -Lombok (annotation)
+  -Spring Boot DevTools(rerun auto)
+  -Spring Web(mvc model)
+  -MySQL Driver(mysql db)
+  -Spring Data JPA(jpa ORM)
+  -Thymeleaf(moteur de vue)
+
+  --ouvrir le projet
+  -lancer pom.xml
