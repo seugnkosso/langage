@@ -17,3 +17,15 @@
 
   --------configuration des variable global
   --dans src/main/java/Gestion_stock/config/GlobalVariable.java
+
+
+  ----------creation des entités
+  ---dans src/main/java/Gestion_stock/data/entities
+
+  ---creer la classe AbstractEntity
+  -le supperClasse qui contient les attribut partager par toutes les classe comme attribut
+
+  ---creer les autres entités qui hérite abstractEntity
+
+  ---manipulation des dates
+  --https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format
