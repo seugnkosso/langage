@@ -29,3 +29,13 @@
 
   ---manipulation des dates
   --https://www.digitalocean.com/community/tutorials/java-simpledateformat-java-date-format
+
+  ------------création des entité pour la sécurité
+
+  ---dans src/main/java/Gestion_stock/security/data/entities
+  --deux classe User et role
+
+  ---dans src/main/java/Gestion_stock/data/entities
+  --on met les classe des user qui hérite de User
+
+
