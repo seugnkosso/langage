@@ -1,4 +1,4 @@
------------------création d'un projet spring
+-----------------création du projet
   --dans spring initialiser https://start.spring.io/
   --ajouter les dépendance de base
   -Lombok (annotation)
@@ -10,3 +10,10 @@
 
   --ouvrir le projet
   -lancer pom.xml
+
+
+  ------------------------configuration db
+  ---dans src/main/resources/application.properties
+
+  --------configuration des variable global
+  --dans src/main/java/Gestion_stock/config/GlobalVariable.java
