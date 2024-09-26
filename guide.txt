@@ -71,4 +71,12 @@
 --ensuite les implémenté
 
 
+------------les services
+---dans src/main/java/Gestion_stock/services
+--creer les interfaces
+--c'est la ou on pose la logique
+--la relation entre repositorie et controller
+
+
+
 
