@@ -63,3 +63,12 @@
 --------------------------fixtures
 ---dans src/main/java/Gestion_stock/data/fixtures
 ---dans src/main/java/Gestion_stock/security/data/fixtures
+
+-----------------les controllers
+---dans src/main/java/Gestion_stock/web/controllers
+--creer les interface
+-définir les endpoint
+--ensuite les implémenté
+
+
+
