@@ -1,5 +1,6 @@
 package Gestion_stock.security.controllers;
 
+import Gestion_stock.security.controllers.dto.AuthenticationRequestDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

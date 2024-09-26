@@ -16,7 +16,7 @@ public class Panier extends AbstractEntity{ //étendre abstractEntity pour pour 
     @Column // pour dire l'attribut est une colonne de la table a la db
     private Long total;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "client_id",referencedColumnName = "id")
     private Client client;
 

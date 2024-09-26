@@ -6,6 +6,7 @@ import Gestion_stock.security.controllers.dto.AuthenticationRequestDto;
 import Gestion_stock.security.controllers.dto.TokenReponseDto;
 import Gestion_stock.security.services.SecurityService;
 import Gestion_stock.security.services.impl.JwtService;
+import Gestion_stock.web.dto.response.RestResponsDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -35,7 +36,6 @@ public class SecurityControllerImpl implements SecurityController {
 
     @Override
     public ResponseEntity<Map<Object, Object>> login(@RequestBody AuthenticationRequestDto authenticationRequestDto) {
-        log.info(authenticationRequestDto.getPassword());
         Authentication authenticate = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authenticationRequestDto.getUsername(), authenticationRequestDto.getPassword()));
         Map<Object, Object> response;
         if(authenticate.isAuthenticated()){

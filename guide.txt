@@ -59,3 +59,7 @@
  ---creer JwtService
  --dans
 
+
+--------------------------fixtures
+---dans src/main/java/Gestion_stock/data/fixtures
+---dans src/main/java/Gestion_stock/security/data/fixtures
