@@ -18,7 +18,7 @@ public class ProduitFixture {
         for (int i = 1; i < 20; i++) {
             Produit p = new Produit();
             p.setMagasin(magasinRepository.findById((long)1).get());
-            p.setTotal((long)i+20);
+            p.setQte((long)i+20);
             p.setLibelle("produit"+i);
             p.setCategorie("categorie1"+i);
             p.setPhoto("photo");

@@ -24,6 +24,7 @@ public class AdminFixture {
             a.setTelephone("77233494"+i);
             adminRepository.save(a);
             securityService.addRoleToUser(a.getUsername(), "Admin");
+            securityService.addRoleToUser(a.getUsername(), "Vendeur");
         }
     }
 }

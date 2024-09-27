@@ -77,6 +77,34 @@
 --c'est la ou on pose la logique
 --la relation entre repositorie et controller
 
+-------------récupèrer tous les admins
+--faire le requete dans la repositorie
+
+--creer la methode qui récupère tous les admin dans la service
+-déclarer adminRepository dans la service
+
+--partir dans le controlleur
+-déclarer adminService
+-creer AdminListeDto
+-convertir les admins en adminListeDto
+-creer un map pour le json a retourner
+
+
+-----------récupèrer les produits
+--faire le requète dans la repositories
+
+--creer la methode du services qui utilise le reposirorie
+-interface
+-impl
+
+--creer le controller qui utilise le service
+-interface
+-impl
+
+--creer le dto qui designe les donnée a envoyer
+
+
+
 
 
 

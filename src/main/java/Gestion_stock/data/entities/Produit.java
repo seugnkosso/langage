@@ -16,7 +16,7 @@ public class Produit extends AbstractEntity{ //étendre abstractEntity pour pour
     @Column // pour dire l'attribut est une colonne de la table a la db
     private String libelle;
     @Column
-    private Long total;
+    private Long qte;
     @Column
     private String categorie;
     @Column

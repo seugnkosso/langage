@@ -1,6 +1,7 @@
 package Gestion_stock.security.controllers.impl;
 
 
+import Gestion_stock.config.GlobalVariable;
 import Gestion_stock.security.controllers.SecurityController;
 import Gestion_stock.security.controllers.dto.AuthenticationRequestDto;
 import Gestion_stock.security.controllers.dto.TokenReponseDto;
@@ -23,11 +24,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
-@RequestMapping("/api")
+
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(value = "http://localhost:4200")
-@Slf4j
+@CrossOrigin(value = GlobalVariable.urlFront)
 public class SecurityControllerImpl implements SecurityController {
     private final SecurityService securityService;
     private final AuthenticationManager authenticationManager;
