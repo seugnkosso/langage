@@ -28,7 +28,7 @@ public class VendeurFixture {
             v.setTelephone("77233496"+i);
             v.setMagasin(magasinRepository.findById((long)1).get());
             vendeurRepository.save(v);
-            securityService.addRoleToUser(v.getUsername(), "Admin");
+            securityService.addRoleToUser(v.getUsername(), "Vendeur");
         }
     }
 }

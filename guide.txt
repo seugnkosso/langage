@@ -104,6 +104,13 @@
 --creer le dto qui designe les donnée a envoyer
 
 
+-----------------ajouter un produit
+--creer le controller PostMapping
+--creer le dto Request
+--creer le service logique d'hydratation et ajout
+--retour dans le controller pour donner le data a la service
+
+
 
 
 

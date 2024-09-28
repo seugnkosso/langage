@@ -5,6 +5,7 @@ import Gestion_stock.data.entities.Produit;
 import Gestion_stock.services.ProduitService;
 import Gestion_stock.services.impl.ProduitServiceImpl;
 import Gestion_stock.web.controllers.ProduitController;
+import Gestion_stock.web.dto.request.ProduitRequestDto;
 import Gestion_stock.web.dto.response.RestResponsDto;
 import Gestion_stock.web.dto.response.produit.ProduitListeDto;
 import lombok.RequiredArgsConstructor;
@@ -38,5 +39,12 @@ public class ProduitControllerImpl implements ProduitController {
                 HttpStatus.OK
                 );
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<?> create(ProduitRequestDto produitRequestDto) {
+        Produit produit = produitService.createProduit(produitRequestDto);
+        Map<Object, Object> response = RestResponsDto.response(null, HttpStatus.OK);
+        return new ResponseEntity<>(response,HttpStatus.OK);
     }
 }

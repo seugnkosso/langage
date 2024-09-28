@@ -2,6 +2,7 @@ package Gestion_stock.data.entities;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 public class Produit extends AbstractEntity{ //étendre abstractEntity pour pour hérité ces attribut et fonctions comme l'id
     @Column // pour dire l'attribut est une colonne de la table a la db
     private String libelle;
