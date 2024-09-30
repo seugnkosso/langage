@@ -10,6 +10,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @RequiredArgsConstructor
 @Service
 public class ProduitServiceImpl implements ProduitService {
@@ -33,6 +35,31 @@ public class ProduitServiceImpl implements ProduitService {
                         .magasin(magasinRepository.findById(produitRequestDto.getMagasinId()).get())
                         .categorie(produitRequestDto.getCategorie())
                         .build());
+        return null;
+    }
+
+    @Override
+    public Produit getProduitByLibelle(String libelle) {
+        return produitRepository.findAllByLibelle(libelle);
+    }
+
+    @Override
+    public Produit updateProduit(ProduitRequestDto produitRequestDto) {
+        Optional<Produit> produit = produitRepository.findById(produitRequestDto.getId());
+        if (produit.isPresent()) {
+            Produit produit1 = produit.get();
+            produit1.setQte(produitRequestDto.getQte());
+            produit1.setLibelle(produitRequestDto.getLibelle());
+            produit1.setPrixAchat(produitRequestDto.getPrixAchat());
+            produit1.setPrixVente(produitRequestDto.getPrixVente());
+            produit1.setPrixVenteMin(produitRequestDto.getPrixVenteMin());
+            produit1.setReference(produitRequestDto.getReference());
+            produit1.setPhoto(produitRequestDto.getPhoto());
+            produit1.setCategorie(produitRequestDto.getCategorie());
+            produit1.setMagasin(magasinRepository.findById(produitRequestDto.getMagasinId()).get());
+            produitRepository.save(produit1);
+            return produit1;
+        }
         return null;
     }
 }

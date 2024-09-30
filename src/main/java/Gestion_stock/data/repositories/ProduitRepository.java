@@ -17,4 +17,6 @@ public interface ProduitRepository extends JpaRepository<Produit,Long> {
             "where (p.categorie like %:search% or p.libelle like %:search% or p.reference like %:search%)" +
             " and v.id = :idUser ")
     Page<Produit> FindAllBySearch(@Param("search") String search, @Param("idUser") int id, Pageable pageable);
+
+    Produit findAllByLibelle(String libelle);
 }

@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class ProduitRequestDto {
+    private Long id;
+
     private String libelle;
 
     private Long qte;

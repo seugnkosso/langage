@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+import java.util.HashMap;
 import java.util.Map;
 
 @Controller
@@ -45,6 +46,28 @@ public class ProduitControllerImpl implements ProduitController {
     public ResponseEntity<?> create(ProduitRequestDto produitRequestDto) {
         Produit produit = produitService.createProduit(produitRequestDto);
         Map<Object, Object> response = RestResponsDto.response(null, HttpStatus.OK);
+        return new ResponseEntity<>(response,HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<?> update(ProduitRequestDto produitRequestDto) {
+        Produit produit = produitService.updateProduit(produitRequestDto);
+        if (produit == null) {
+            Map<Object, Object> response = RestResponsDto.response(null, HttpStatus.OK);
+            return new ResponseEntity<>(response,HttpStatus.OK);
+        }
+        Map<Object, Object> response = RestResponsDto.response(produit, HttpStatus.OK);
+        return new ResponseEntity<>(response,HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<?> produitLibelle(String libelle) {
+        Produit produitByLibelle = produitService.getProduitByLibelle(libelle);
+        Map<Object, Object> response = new HashMap<>() ;
+        if(produitByLibelle != null) {
+            ProduitListeDto produitListeDto = ProduitListeDto.toDto(produitByLibelle);
+            response = RestResponsDto.response(produitListeDto, HttpStatus.OK);
+        }
         return new ResponseEntity<>(response,HttpStatus.OK);
     }
 }
