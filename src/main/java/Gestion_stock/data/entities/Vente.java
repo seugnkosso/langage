@@ -18,7 +18,7 @@ import java.util.Date;
 public class Vente extends AbstractEntity{ //étendre abstractEntity pour pour hérité ces attribut et fonctions comme l'id
     @Column // pour dire l'attribut est une colonne de la table a la db
     @Temporal(TemporalType.DATE)
-    @DateTimeFormat(pattern = "EEEE, yyyy-MMMMM-dd HH:mm:ss")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date dateVente;
 
     @Column
