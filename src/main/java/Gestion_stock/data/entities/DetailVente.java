@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -13,12 +14,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 public class DetailVente extends AbstractEntity{ //étendre abstractEntity pour pour hérité ces attribut et fonctions comme l'id
     @Column // pour dire l'attribut est une colonne de la table a la db
     private Long qte;
 
     @Column
     private Long total;
+
+    @Column
+    private Long prix;
 
     @ManyToOne
     private Produit produit;

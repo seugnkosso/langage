@@ -21,7 +21,7 @@ import java.util.List;
 @DiscriminatorValue(value = "user")
 public class AppUser extends AbstractEntity {
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     protected String nomComplet;
 
     @Column(unique = true, nullable = false)
