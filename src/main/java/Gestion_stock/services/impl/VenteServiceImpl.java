@@ -49,6 +49,11 @@ public class VenteServiceImpl implements VenteService {
     }
 
     @Override
+    public Vente findByid(Long venteid) {
+        return venteRepository.findById(venteid).get();
+    }
+
+    @Override
     public Long total(String tel, String dateVente) {
         if(!Objects.equals(dateVente, "") && !Objects.equals(tel, "")) {
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");

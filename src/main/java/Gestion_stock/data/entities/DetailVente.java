@@ -30,6 +30,4 @@ public class DetailVente extends AbstractEntity{ //étendre abstractEntity pour 
 
     @ManyToOne
     private Vente vente;
-
-
 }

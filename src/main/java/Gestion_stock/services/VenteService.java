@@ -12,5 +12,6 @@ import java.util.Date;
 @Service //la classe est un service
 public interface VenteService {
    Page<Vente> findAllVenteByClTelOrDate(String tel, String dateVente, Pageable pageable);
+   Vente findByid(Long venteid);
    Long total(String tel, String dateVente);
 }

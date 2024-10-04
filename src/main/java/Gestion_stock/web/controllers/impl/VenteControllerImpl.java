@@ -6,6 +6,7 @@ import Gestion_stock.data.repositories.VenteRepository;
 import Gestion_stock.services.VenteService;
 import Gestion_stock.web.controllers.VenteController;
 import Gestion_stock.web.dto.response.RestResponsDto;
+import Gestion_stock.web.dto.response.vente.VenteDto;
 import Gestion_stock.web.dto.response.vente.VenteListeDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -38,6 +39,14 @@ public class VenteControllerImpl implements VenteController {
                 HttpStatus.OK
         );
         return new ResponseEntity<>(response, HttpStatus.OK);
+    }
+
+    @Override
+    public ResponseEntity<?> ventesId(int id) {
+        Vente vente = venteService.findByid((long) id);
+        VenteDto venteDto = VenteDto.toDto(vente);
+        RestResponsDto.response(venteDto, HttpStatus.OK);
+        return new ResponseEntity<>(venteDto, HttpStatus.OK);
     }
 
     @Override

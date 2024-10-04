@@ -18,6 +18,11 @@ public interface VenteController {
             @RequestParam(defaultValue = "") String dateVente
     );
 
+    @GetMapping("/ventes/id") //Get request
+    ResponseEntity<?> ventesId(
+            @RequestParam() int id
+    );
+
     @GetMapping("/ventes/total") //Get request
     ResponseEntity<?> totals(
             @RequestParam(defaultValue = "") String tel,

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity //dire que la classe est une entité
 @Table //dire la classe est une table a la db
@@ -29,4 +30,7 @@ public class Vente extends AbstractEntity{ //étendre abstractEntity pour pour h
 
     @ManyToOne
     private Vendeur vendeur;
+
+    @OneToMany(mappedBy = "vente")
+    private List<DetailVente> listDetailVente;
 }
