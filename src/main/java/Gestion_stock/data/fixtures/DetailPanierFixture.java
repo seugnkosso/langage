@@ -9,7 +9,7 @@ import Gestion_stock.data.repositories.ProduitRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 @RequiredArgsConstructor
 public class DetailPanierFixture {
     private final DetailPanierRepository detailPanierRepository;

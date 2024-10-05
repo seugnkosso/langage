@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-@Component
+//@Component
 @RequiredArgsConstructor
 public class VenteFixture {
     private final VenteRepository venteRepository;

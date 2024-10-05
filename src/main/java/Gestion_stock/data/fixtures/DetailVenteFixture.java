@@ -6,7 +6,7 @@ import Gestion_stock.data.repositories.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 @RequiredArgsConstructor
 public class DetailVenteFixture {
     private final DetailVenteRepository detailVenteRepository;
