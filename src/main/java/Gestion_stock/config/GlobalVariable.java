@@ -7,5 +7,5 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor // génère constructeur all final attribut
 public class GlobalVariable {
     public static final String urlFront = "http://localhost:4200";
-    public static final String size = "5";
+    public static final String size = "15";
 }

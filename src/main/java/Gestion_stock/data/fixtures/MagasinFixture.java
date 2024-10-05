@@ -16,8 +16,8 @@ public class MagasinFixture {
 
     public void run(){
             Magasin m = new Magasin();
-            m.setTelephone("76.666.66.38");
-            m.setAdress("Darou Salam, le vireage");
+            m.setTelephone("+221 33 867 74 48 / +221 76 666 66 38");
+            m.setAdress("Sébikotane, en face PAMECAS");
             m.setLibelle("LE VIRAGE ELECTRONIQUE");
             magasinRepository.save(m);
     }

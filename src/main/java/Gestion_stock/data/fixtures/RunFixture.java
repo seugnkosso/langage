@@ -15,7 +15,7 @@ public class RunFixture implements CommandLineRunner {
     private final ClientFixture clientFixture;
     private final MagasinFixture magasinFixture;
     private final PanierFixture panierFixture;
-    private final ProduitFixture produitFixture;
+    //private final ProduitFixture produitFixture;
     private final VendeurFixture vendeurFixture;
     private final VenteFixture venteFixture;
     private final DetailPanierFixture detailPanierFixture;
@@ -27,10 +27,10 @@ public class RunFixture implements CommandLineRunner {
         clientFixture.run();
         magasinFixture.run();
         panierFixture.run();
-        produitFixture.run();
+        //produitFixture.run();
         vendeurFixture.run();
         venteFixture.run();
-        detailPanierFixture.run();
-        detailVenteFixture.run();
+        //detailPanierFixture.run();
+        //detailVenteFixture.run();
     }
 }
