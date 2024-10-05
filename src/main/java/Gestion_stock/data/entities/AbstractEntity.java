@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class AbstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    protected Long id;
     @Column
-    private Boolean isActive = true;
+    protected Boolean isActive = true;
 }
