@@ -43,5 +43,4 @@ public class AppUser extends AbstractEntity {
             inverseJoinColumns =@JoinColumn(name = "role_id")
     )
     protected List<Role> listRole = new ArrayList<>();
-
 }
