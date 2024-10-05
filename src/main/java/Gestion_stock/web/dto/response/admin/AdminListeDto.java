@@ -28,7 +28,7 @@ public class AdminListeDto {
 
     public static AdminListeDto toDto(Admin admin) {
         return AdminListeDto.builder()
-                .id((long) admin.getId())
+                .id(admin.getId())
                 .email(admin.getEmail())
                 .nomComplet(admin.getNomComplet())
                 .telephone(admin.getTelephone())
