@@ -33,9 +33,6 @@ public class Produit extends AbstractEntity{ //étendre abstractEntity pour pour
     private Long prixVenteMin;
 
     @OneToMany(mappedBy = "produit")
-    private List<DetailPanier> listDetailPanier;
-
-    @OneToMany(mappedBy = "produit")
     private List<DetailVente> listDetailVente;
 
     @ManyToOne

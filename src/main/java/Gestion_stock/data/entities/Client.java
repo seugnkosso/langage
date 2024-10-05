@@ -19,7 +19,5 @@ public class Client extends AppUser { //étendre User pour qui hérite lui meme 
     @OneToMany(mappedBy = "client") // dit que cette un client peut etre concidèrer par plusieurs ventes - mappedBy = "client"(le nom de l'attribut dans vente)
     private List<Vente> listeVente;
 
-    @OneToOne(mappedBy = "client")
-    private Panier panier;
 
 }
