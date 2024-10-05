@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/Gestion_stock-0.0.1-SNAPSHOT.jar.jar
+web: java -jar target/Gestion_stock-0.0.1-SNAPSHOT.jar.jar
