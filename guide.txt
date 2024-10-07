@@ -1,0 +1,15 @@
+----------------creation du projet
+
+-------installation de python 
+---https://www.python.org/downloads/
+
+----creer un environnement virtual et l'activer 
+--séparation des version 
+--py -m venv <DIR>
+--<DIR>\Scripts\activate
+
+------upgradde pip 
+---py -m pip install --upgrade pip
+
+----installer django
+---py -m pip install Django
