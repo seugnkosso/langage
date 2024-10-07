@@ -26,10 +26,10 @@ public class RunFixture implements CommandLineRunner {
         adminFixture.run();
         clientFixture.run();
         magasinFixture.run();
-        panierFixture.run();
+       // panierFixture.run();
         //produitFixture.run();
         vendeurFixture.run();
-        venteFixture.run();
+        //venteFixture.run();
         //detailPanierFixture.run();
         //detailVenteFixture.run();
     }
