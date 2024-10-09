@@ -1,0 +1,27 @@
+---------------creation de projet djangoRest api
+
+------creer l'environnement virtuel
+--py -m venv [nomVenv]
+
+-----creer requirements.txt 
+django>=4.0,<4.1
+djangorestframework
+pyyaml
+requests
+django-cors-headers
+
+------installer les dépendance 
+---pip install -r requirements.txt
+
+-----mettre tous les dépendances installer dans requirements.txt
+---pip freeze > requirements.txt
+
+-----creer un dossier backend et frontend
+
+-----creer un projet django
+--django-admin startproject [nomProjet]
+
+-----creer une application dans le projet 
+--django-admin startapp [nomApp] 
+
+---mettre l'application creer dans App
