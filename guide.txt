@@ -25,3 +25,25 @@ django-cors-headers
 --django-admin startapp [nomApp] 
 
 ---mettre l'application creer dans App
+
+
+
+---------------------base api rest
+
+------conversion des json en dictionnaire
+--data = json.loads(jsonData)
+
+------convertir de dictionnaire en json 
+--pre_data = json.dumps(dic_Data)
+
+-----recuperation du headers 
+--data['headers'] = dic(request.headers)
+
+-----récupèration des param d'Url
+--data['params] = dic(request.GET)
+
+----récupèration des parametre post 
+--data['post_data'] = dic(request.POST)
+
+---récupèration du contente_type
+--data['content_type'] = request.content_type
