@@ -47,3 +47,6 @@ django-cors-headers
 
 ---récupèration du contente_type
 --data['content_type'] = request.content_type
+
+
+----------------limit de django sur le reste
