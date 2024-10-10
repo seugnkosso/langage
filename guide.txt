@@ -1,0 +1,4 @@
+--creation du projet django mise en place des model et les admins interface et tailwindcss 
+-venv - pip install django - pip install tailwindcss - requirement.text_fields
+
+
