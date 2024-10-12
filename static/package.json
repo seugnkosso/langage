@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "npx tailwindcss -i ./css/input.css -o ./css/output.css --watch",
+    "build": "npx tailwindcss -i ./css/input.css -o ./css/output.css --build"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "flowbite": "^2.5.2",
+    "tw-elements": "^2.0.0"
+  }
+}

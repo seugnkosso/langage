@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     
     'core',
     'compressor', 
-    'node_modules',
 ]
 
 MIDDLEWARE = [

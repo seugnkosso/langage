@@ -1,0 +1,30 @@
+{% load compress %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% compress css %}
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
+    {% endcompress %}
+    <title>{{title}}</title>
+</head>
+<body>
+    {% include 'core/navbar.html' %}
+    
+    <div class="my-[2rem] w-[90%] mx-auto">
+        {% block content %}
+        
+        {% endblock content %}        
+    </div>
+    {% include 'core/footer.html' %}
+    
+    <script src="{% static 'node_modules/flowbite/dist/flowbite.js' %}"></script>
+    <script src="{% static 'node_modules/flowbite/dist/flowbite.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <script
+    src="{% static 'node_modules/tw-elements/js/tw-elements.umd.min.js' %}" type="text/javascript"></script>
+</body>
+</html>

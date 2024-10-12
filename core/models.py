@@ -1,6 +1,7 @@
+from typing import Any
 from django.db import models
 
-class SuperEntity(models.Model):
+class SuperEntity(models.Model):    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     archived = models.BooleanField(default=False)
@@ -8,8 +9,12 @@ class SuperEntity(models.Model):
     class meta :
         abstract = True
     
-class User(SuperEntity):
-        
+    
+    
+class User(SuperEntity):       
+    
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        super().__init__(*args, **kwargs)
         
     full_name = models.CharField(max_length=255)
     username = models.CharField(max_length=255,unique=True)
@@ -18,11 +23,18 @@ class User(SuperEntity):
     email = models.EmailField(max_length=255,unique=True)
     type = models.CharField(max_length=255)
     
+    
+    
     def __str__(self) -> str:
         return self.full_name
     
+    class meta :
+        abstract = True
+    
+    
 class Admin(User):        
-    def __init__(self, *args, **kwargs):        
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)        
         self.type = 'Admin'  
         
     def __str__(self) -> str:
@@ -30,6 +42,7 @@ class Admin(User):
         
 class Agent(User):
     def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         
         self.type = 'Agent'
         
@@ -38,14 +51,15 @@ class Agent(User):
         
 class Tenant(User):
     def __init__(self, *args, **kwargs):
-        
+        super().__init__(*args, **kwargs)        
         self.type = 'Tenant'
     
     def __str__(self) -> str:
         return self.full_name
 
 class Owner(User):
-    def __init__(self, *args, **kwargs):        
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)        
         self.type = 'Owner'
         self.username = f"proprietaire"
         self.full_name = f"Propriétaire"
@@ -72,7 +86,7 @@ class Real_estate(SuperEntity):
     img3 = models.ImageField(upload_to='images/',null=True,blank=True)
     img4 = models.ImageField(upload_to='images/',null=True,blank=True)
     state = models.CharField(max_length=255,default='available')
-    owner = models.ForeignKey(Owner,on_delete=models.CASCADE)
+    ow = models.ForeignKey(Owner,on_delete=models.CASCADE)
     addres = models.ForeignKey(Address,on_delete=models.CASCADE)
     
     
@@ -81,7 +95,7 @@ class Real_estate(SuperEntity):
         
 class Rental(SuperEntity):    
     price = models.IntegerField()
-    tenant = models.ForeignKey(Tenant,on_delete=models.CASCADE)
+    ten = models.ForeignKey(Tenant,on_delete=models.CASCADE)
     real_e = models.OneToOneField(
         Real_estate,
         on_delete=models.CASCADE,

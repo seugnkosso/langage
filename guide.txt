@@ -2,3 +2,5 @@
 -venv - pip install django - pip install tailwindcss - requirement.text_fields
 
 
+------------liste locataire 
+- listView - template - js search - tailwind flowbite - tenantController - config varGlobal - 
