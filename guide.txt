@@ -3,4 +3,7 @@
 
 
 ------------liste locataire 
-- listView - template - js search - tailwind flowbite - tenantController - config varGlobal - 
+- listView - template - js search - tailwind flowbite - tenantController - config varGlobal -
+
+-----creer et modifier 
+locataire - proprietaire - address 

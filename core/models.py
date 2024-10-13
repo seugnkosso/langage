@@ -17,10 +17,10 @@ class User(SuperEntity):
         super().__init__(*args, **kwargs)
         
     full_name = models.CharField(max_length=255)
-    username = models.CharField(max_length=255,unique=True)
-    password = models.CharField(max_length=255)
-    tel = models.CharField(max_length=255,unique=True)
-    email = models.EmailField(max_length=255,unique=True)
+    username = models.CharField(max_length=255,null=True, blank=True,default='ok')
+    password = models.CharField(max_length=255,null=True, blank=True,default='ok')
+    tel = models.CharField(max_length=255)
+    email = models.EmailField(max_length=255)
     type = models.CharField(max_length=255)
     
     
@@ -60,13 +60,10 @@ class Tenant(User):
 class Owner(User):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)        
-        self.type = 'Owner'
-        self.username = f"proprietaire"
-        self.full_name = f"Propriétaire"
-        self.password = f"passer"  
+        self.type = 'Owner'        
     
     def __str__(self) -> str:
-        return self.full_name      
+        return self.full_name + "-" + self.tel + "-" + self.email    
         
 class Address(SuperEntity):
     municipality = models.CharField(max_length=255,unique=True,default="Sébikotane")    
@@ -74,7 +71,7 @@ class Address(SuperEntity):
     street = models.CharField(max_length=255,unique=True)
     
     def __str__(self) -> str:
-        return self.street
+        return self.street + "-" + self.municipality + "-" + self.neighborhood
         
 class Real_estate(SuperEntity):
     libel = models.CharField(max_length=255,unique=True)
@@ -85,7 +82,7 @@ class Real_estate(SuperEntity):
     img2 = models.ImageField(upload_to='images/',null=True,blank=True)
     img3 = models.ImageField(upload_to='images/',null=True,blank=True)
     img4 = models.ImageField(upload_to='images/',null=True,blank=True)
-    state = models.CharField(max_length=255,default='available')
+    state = models.CharField(max_length=255,default='disponible')
     ow = models.ForeignKey(Owner,on_delete=models.CASCADE)
     addres = models.ForeignKey(Address,on_delete=models.CASCADE)
     

@@ -1,9 +1,13 @@
 from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
-from django.views.generic import ListView,CreateView
+from django.urls import reverse_lazy
+from django.views.generic import ListView,CreateView,UpdateView,DeleteView
+from django import forms, template
+
 
 from core.config.const import constente
+from core.forms.Tenant import TenantForm
 from core.models import Tenant
 
 class TenantlistView(ListView):
@@ -33,6 +37,26 @@ class TenantlistView(ListView):
     
     
     
-# class TenantView(CreateView):
+class TenantCreateView(CreateView):        
+    model = Tenant
+    form_class = TenantForm
+    template_name = 'tenant/create.html'
+    success_url = '/tenants'
+    
+class TenantUpdateView(UpdateView):        
+    model = Tenant
+    form_class = TenantForm
+    template_name = 'tenant/create.html'
+    success_url = '/tenants'
+    
+class TenantDeleteView(DeleteView):        
+    model = Tenant
+    template_name = 'tenant/delete.html'
+    success_url = reverse_lazy('tenantsList') 
+            
+        
+        
+    
+
 
     

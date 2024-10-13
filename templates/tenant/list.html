@@ -4,8 +4,7 @@
 
 {% block content %}
 
-<div class="">
-    
+<div class="">    
         <!-- Table responsive wrapper -->
         <div class="overflow-x-auto bg-white dark:bg-neutral-700">
 
@@ -13,10 +12,10 @@
             <!-- Search input -->
             <div class="relative m-[2px] mb-3 mr-5 float-left">
                 <label for="inputSearch" class="sr-only">Search </label>
-                <input  data-path="{{data_path}}/tenants" id="tel" type="text" value="{{telClient}}" placeholder="numero client" class="block w-64 rounded-lg border dark:border-none dark:bg-neutral-600 py-2 pl-10 pr-4 text-sm focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-400" />                
+                <input  data-path="{{data_path}}/tenants" id="tel" type="text" value="{{telClient}}" placeholder="numero locataire" class="block w-64 rounded-lg border dark:border-none dark:bg-neutral-600 py-2 pl-10 pr-4 text-sm focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-400" />                
             </div>
             <div class="">
-                <button type="button" class="inline-block rounded border-2 border-indigo-500 text-blue-800 hover:border-indigo-600 hover:bg-blue-800  hover:text-white focus:border-indigo-700  active:border-indigo-800 active:text-white dark:border-indigo-300 dark:text-indigo-300 dark:hover:hover:bg-indigo-300 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal transition duration-150 ease-in-out focus:outline-none focus:ring-0">ajouter</button>
+                <a href="{% url 'tenantsCreate' %}" class="inline-block rounded border-2 border-indigo-500 text-blue-800 hover:border-indigo-600 hover:bg-blue-800  hover:text-white focus:border-indigo-700  active:border-indigo-800 active:text-white dark:border-indigo-300 dark:text-indigo-300 dark:hover:hover:bg-indigo-300 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal transition duration-150 ease-in-out focus:outline-none focus:ring-0">ajouter</a>
             </div>
         </div>
 
@@ -51,8 +50,10 @@
                 </th>
                 <td class="px-6 py-3">{{tenant.tel}}</td>
                 <td class="px-6 py-3"> {{tenant.email}} </td>
-                <td class="px-6 py-3"></td>
-            </tr>       
+                <td class="px-6 py-3 flex justify-end"> 
+                    <a href="{% url 'tenantsUpdate' tenant.id %}" ><img class="object-contain w-[3rem] h-[3rem]" src="../../static/media/update.png" alt=""></a>
+                </td>
+            </tr>           
     {% endfor %}
     
             

@@ -946,7 +946,7 @@
 									"font": "Arial;13;0",
 									"left": 480,
 									"top": 581,
-									"width": 115.49169921875,
+									"width": 115,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGSdd6f1lFqF1Q="
@@ -1955,7 +1955,7 @@
 									"font": "Arial;13;0",
 									"left": 496.5,
 									"top": 205,
-									"width": 79.34814453125,
+									"width": 79,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGSdeISJ4tvKRE="
@@ -2512,7 +2512,7 @@
 									"font": "Arial;13;0",
 									"left": 992,
 									"top": 381,
-									"width": 75.00634765625,
+									"width": 74,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAGSdec0TJ5nwz4="
@@ -4430,6 +4430,7 @@
 											"model": {
 												"$ref": "AAAAAAGSdf79Jbf/XCI="
 											},
+											"visible": false,
 											"font": "Arial;13;0",
 											"left": 293,
 											"top": 764,
@@ -4449,7 +4450,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 293,
-											"top": 779,
+											"top": 764,
 											"width": 77.2607421875,
 											"height": 13,
 											"text": "+Proprietaire",
@@ -4466,7 +4467,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 293,
-											"top": 794,
+											"top": 779,
 											"width": 77.2607421875,
 											"height": 13,
 											"text": "+Address",
@@ -4483,7 +4484,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 293,
-											"top": 809,
+											"top": 794,
 											"width": 77.2607421875,
 											"height": 13,
 											"text": "+Location",
@@ -4494,7 +4495,7 @@
 									"left": 288,
 									"top": 609,
 									"width": 87.2607421875,
-									"height": 218
+									"height": 203
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -4507,7 +4508,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 288,
-									"top": 827,
+									"top": 812,
 									"width": 87.2607421875,
 									"height": 10
 								},
@@ -5143,9 +5144,9 @@
 										"$ref": "AAAAAAGSdflliasbJnM="
 									},
 									"font": "Arial;13;0",
-									"left": 262,
+									"left": 261,
 									"top": 628,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -7091,9 +7092,9 @@
 										"$ref": "AAAAAAGSdj177d868iM="
 									},
 									"font": "Arial;13;0",
-									"left": 548,
+									"left": 547,
 									"top": 483,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -7192,7 +7193,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdesCeqk4Sn4="
 							},
-							"name": "id"
+							"name": "id",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7200,7 +7202,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdesCeqk4Sn4="
 							},
-							"name": "nomComplet"
+							"name": "nomComplet",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7208,7 +7211,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdesCeqk4Sn4="
 							},
-							"name": "username"
+							"name": "username",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7216,7 +7220,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdesCeqk4Sn4="
 							},
-							"name": "password"
+							"name": "password",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7224,7 +7229,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdesCeqk4Sn4="
 							},
-							"name": "telephone"
+							"name": "telephone",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7232,7 +7238,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdesCeqk4Sn4="
 							},
-							"name": "email"
+							"name": "email",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7240,7 +7247,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdesCeqk4Sn4="
 							},
-							"name": "type"
+							"name": "type",
+							"type": ""
 						}
 					]
 				},
@@ -7335,7 +7343,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "id"
+							"name": "id",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7343,7 +7352,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "libelle"
+							"name": "libelle",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7351,7 +7361,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "description"
+							"name": "description",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7359,7 +7370,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "coordonnée"
+							"name": "coordonnée",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7367,7 +7379,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "tarif"
+							"name": "tarif",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7375,7 +7388,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "img1"
+							"name": "img1",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7392,7 +7406,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "img2"
+							"name": "img2",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7400,7 +7415,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "img3"
+							"name": "img3",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7408,7 +7424,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "img4"
+							"name": "img4",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7416,7 +7433,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "Etat"
+							"name": "Etat",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7424,7 +7442,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "locataire"
+							"name": "locataire",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7432,7 +7451,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "Proprietaire"
+							"name": "Proprietaire",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7440,7 +7460,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "Address"
+							"name": "Address",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7448,7 +7469,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeuZFqnf8Iw="
 							},
-							"name": "Location"
+							"name": "Location",
+							"type": ""
 						}
 					]
 				},
@@ -7539,7 +7561,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeulwqoJq88="
 							},
-							"name": "listLocation"
+							"name": "listLocation",
+							"type": ""
 						}
 					]
 				},
@@ -7601,7 +7624,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdeu1Faozbu8="
 							},
-							"name": "listBien"
+							"name": "listBien",
+							"type": ""
 						}
 					]
 				},
@@ -7619,7 +7643,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdf/ZN7qzPnc="
 							},
-							"name": "create_at"
+							"name": "create_at",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7627,7 +7652,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdf/ZN7qzPnc="
 							},
-							"name": "update_at"
+							"name": "update_at",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7635,7 +7661,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdf/ZN7qzPnc="
 							},
-							"name": "archived"
+							"name": "archived",
+							"type": ""
 						}
 					]
 				},
@@ -7684,7 +7711,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdhOu+bz9OmM="
 							},
-							"name": "id"
+							"name": "id",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7692,7 +7720,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdhOu+bz9OmM="
 							},
-							"name": "commune"
+							"name": "commune",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7700,7 +7729,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdhOu+bz9OmM="
 							},
-							"name": "quartier"
+							"name": "quartier",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7708,7 +7738,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdhOu+bz9OmM="
 							},
-							"name": "rue"
+							"name": "rue",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7716,7 +7747,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdhOu+bz9OmM="
 							},
-							"name": "listBien"
+							"name": "listBien",
+							"type": ""
 						}
 					]
 				},
@@ -7734,7 +7766,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdjzDU9eujVA="
 							},
-							"name": "id"
+							"name": "id",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7751,7 +7784,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdjzDU9eujVA="
 							},
-							"name": "Locataire"
+							"name": "Locataire",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7759,7 +7793,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdjzDU9eujVA="
 							},
-							"name": "Bien"
+							"name": "Bien",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -7767,7 +7802,8 @@
 							"_parent": {
 								"$ref": "AAAAAAGSdjzDU9eujVA="
 							},
-							"name": "prix"
+							"name": "prix",
+							"type": ""
 						}
 					]
 				}

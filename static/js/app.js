@@ -12,6 +12,20 @@
 
 // Tenant JS off 
 
+// Address JS ON
+
+{
+
+    const inputneighborhood = document.querySelector('#neighborhood');
+    if(inputneighborhood){
+        inputneighborhood.addEventListener("change",(event)=>{
+            inputFiltreAsynchrone(event,inputneighborhood);
+        })
+    }   
+}
+
+// Address JS off 
+
 
 
 function inputFiltreAsynchrone(event,input){
@@ -21,19 +35,19 @@ function inputFiltreAsynchrone(event,input){
 
 
 
-function SelectFiltreAsynchrone(event,select){
-    const option=event.target.options[select.selectedIndex];
-    const path=option.getAttribute('data-path')  
-    window.location.href=url;    
-}
+// function SelectFiltreAsynchrone(event,select){
+//     const option=event.target.options[select.selectedIndex];
+//     const path=option.getAttribute('data-path')  
+//     window.location.href=url;    
+// }
 
 
 
 
 
-const selectFiltreProduit =document.querySelector('#select-filtre-Produit');
-if(selectFiltreProduit){
-    selectFiltreProduit.addEventListener("change",(event)=>{
-        SelectFiltreAsynchrone(event,selectFiltreProduit);
-    })
-}
+// const selectFiltreProduit =document.querySelector('#select-filtre-Produit');
+// if(selectFiltreProduit){
+//     selectFiltreProduit.addEventListener("change",(event)=>{
+//         SelectFiltreAsynchrone(event,selectFiltreProduit);
+//     })
+// }
