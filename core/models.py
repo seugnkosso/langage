@@ -63,7 +63,7 @@ class Owner(User):
         self.type = 'Owner'        
     
     def __str__(self) -> str:
-        return self.full_name + " " + self.tel + " " + self.email    
+        return self.full_name + " " + self.tel  
         
 class Address(SuperEntity):
     municipality = models.CharField(max_length=255,unique=True,default="Sébikotane")    
@@ -82,6 +82,10 @@ class Real_estate(SuperEntity):
     img2 = models.ImageField(upload_to='media/',null=True,blank=True)
     img3 = models.ImageField(upload_to='media/',null=True,blank=True)
     img4 = models.ImageField(upload_to='media/',null=True,blank=True)
+    img5 = models.ImageField(upload_to='media/',null=True,blank=True)
+    img6 = models.ImageField(upload_to='media/',null=True,blank=True)
+    img7 = models.ImageField(upload_to='media/',null=True,blank=True)
+    img8 = models.ImageField(upload_to='media/',null=True,blank=True)
     state = models.CharField(max_length=255,default='disponible')
     ow = models.ForeignKey(Owner,on_delete=models.DO_NOTHING)
     addres = models.ForeignKey(Address,on_delete=models.DO_NOTHING)

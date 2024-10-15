@@ -36,6 +36,23 @@
             inputFiltreAsynchrone(event,inputsearch_Estate);
         })
     }   
+
+    const detailImgClick = document.querySelector('#detClick');
+    const listImg = document.querySelectorAll('.imgListDet');
+    const baseImg = document.querySelectorAll('#baseImg');
+    if(detailImgClick){
+        detailImgClick.addEventListener("click",(event)=>{
+            detailImgClick.classList.toggle("detailImgClick");            
+        })
+        
+    }
+    if(baseImg){
+        listImg.forEach((img)=>{
+            img.addEventListener("click",(event)=>{
+                baseImg[0].attributes.src.value = img.attributes.src.value
+            })
+        })
+    }
 }
 
 // Real estate JS off 
@@ -52,7 +69,7 @@ function inputFiltreAsynchrone(event,input){
 // function SelectFiltreAsynchrone(event,select){
 //     const option=event.target.options[select.selectedIndex];
 //     const path=option.getAttribute('data-path')  
-//     window.location.href=url;    
+//     window.location.href=url;   
 // }
 
 

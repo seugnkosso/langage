@@ -38,7 +38,7 @@
                 <th scope="col" class="px-6 py-3">
                 date de creation
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 text-right py-3">
                     actions
                 </th>               
             </tr>
@@ -56,7 +56,6 @@
                 <td class="px-6 py-3">{{rental.price}}Fr</td>
                 <td class="px-6 py-3">{{rental.created_at|date:"D , j M Y"}}</td>
                 <td class="px-6 py-3 flex justify-end"> 
-                    <a href="{% url 'rentalUpdate' rental.id %}" ><img class="object-contain w-[3rem] h-[3rem]" src="../../static/media/update.png" alt=""></a>
                     <a onclick="return confirm('Voulez-vous vraiment terminer ce contrat ?')" href="{% url 'rentalUnlink' id=rental.id %}" ><img class="object-contain w-[3rem] h-[3rem]" src="../../static/media/unlink.png" alt=""></a>
                 </td>
             </tr>           

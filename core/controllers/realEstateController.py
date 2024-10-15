@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import ListView,CreateView,UpdateView
 from core.config.const import constente
@@ -41,4 +42,15 @@ class UpdateRealEstateView(UpdateView):
     form_class = Real_estateForm
     template_name = 'real_estate/create.html'
     success_url = reverse_lazy('real_estateList')
+    
+class RealStateView():
+    @staticmethod    
+    def getDetails(request, *args, **kwargs):
+        ident = int(kwargs.get('pk'))
+        estate = Real_estate.objects.get(id=ident)
+        context={
+            'estate' : estate,
+            'title' : 'real estate detail',            
+        }
+        return render(request, 'real_estate/detail.html', context)
     

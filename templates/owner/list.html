@@ -34,7 +34,7 @@
                 <th scope="col" class="px-6 py-3">
                 mail
                 </th>               
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 text-right py-3">
                     actions
                 </th>               
             </tr>
@@ -52,6 +52,7 @@
                 <td class="px-6 py-3"> {{Owner.email}} </td>
                 <td class="px-6 py-3 flex justify-end"> 
                     <a href="{% url 'OwnersUpdate' Owner.id %}" ><img class="object-contain w-[3rem] h-[3rem]" src="../../static/media/update.png" alt=""></a>
+                    <a href="https://wa.me/{{Owner.tel}}" target="_blank"><img class="object-contain w-[3rem] h-[3rem]" src="../../static/media/whatsapp.png" alt=""></a>
                 </td>
             </tr>           
     {% endfor %}

@@ -2,7 +2,7 @@ from django.urls import path
 
 from core.controllers.addressController import AddressCreateView, AddressUpdateView, AddresslistView
 from core.controllers.ownerController import OwnerCreateView, OwnerUpdateView, OwnerlistView
-from core.controllers.realEstateController import UpdateRealEstateView, listRealEstateView, createRealEstateView
+from core.controllers.realEstateController import UpdateRealEstateView, listRealEstateView, createRealEstateView,RealStateView
 from core.controllers.rental import UpdateRentalView, createRentalView, listRentalView, get
 from core.controllers.tenantController import TenantCreateView, TenantDeleteView, TenantUpdateView, TenantlistView
 
@@ -28,6 +28,7 @@ urlpatterns = [
     path('real_estate',listRealEstateView.as_view(),name='real_estateList'),
     path('real_estate/create',createRealEstateView.as_view(),name='real_estateCreate'),
     path('real_estate/update/<int:pk> ',UpdateRealEstateView.as_view(),name='real_estateUpdate'),
+    path('real_estate/details/<int:pk> ',RealStateView.getDetails,name='real_estateDetails'),
     
     path('rentals',listRentalView.as_view(),name='rentalList'),
     path('rentals/create',createRentalView.as_view(),name='rentalCreate'),

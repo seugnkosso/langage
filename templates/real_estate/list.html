@@ -44,7 +44,7 @@
                 <th scope="col" class="px-6 py-3">
                 proprietaire
                 </th>               
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 text-right py-3">
                     actions
                 </th>               
             </tr>
@@ -66,6 +66,7 @@
                 <td class="px-6 py-3 flex justify-end"> 
                     <a href="https://maps.app.goo.gl/LFR8dL5adfbcerxf7?g_st=com.google.maps.preview.copy" target="_blank" ><img class="object-contain w-[3rem] h-[3rem]" src="../../static/media/map.png" alt=""></a>
                     <a href="{% url 'real_estateUpdate' real_.id %}" ><img class="object-contain w-[3rem] h-[3rem]" src="../../static/media/update.png" alt=""></a>
+                    <a href="{% url 'real_estateDetails' real_.id %}" ><img class="object-contain w-[3rem] h-[3rem]" src="../../static/media/details.png" alt=""></a>
                 </td>
             </tr>           
     {% endfor %}

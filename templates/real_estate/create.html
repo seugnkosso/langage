@@ -3,7 +3,7 @@
 
 {% block content %}
 <div class="flex w-full justify-center">
-    <div class="w-[60%] mt-[10%] ">
+    <div class="w-[60%] mb-[5%]">
         <form method="post" enctype="multipart/form-data" >
             {% csrf_token %}
             <div class="flex gap-2">
@@ -21,18 +21,30 @@
             <div class="my-4 w-full">            
                 {{ form.coordinate }}
             </div>        
-            <div class="flex gap-2">    
-                <div class="my-4 w-full">            
+            <div class="flex gap-2 flex-wrap">    
+                <div class="my-4 w-[48%]">            
                     {{ form.img1 }}
                 </div>            
-                <div class="my-4 w-full">            
+                <div class="my-4 w-[48%]">            
                     {{ form.img2 }}
                 </div>            
-                <div class="my-4 w-full">            
+                <div class="my-4 w-[48%]">            
                     {{ form.img3 }}
                 </div>            
-                <div class="my-4 w-full">            
+                <div class="my-4 w-[48%]">            
                     {{ form.img4 }}
+                </div>                              
+                <div class="my-4 w-[48%]">            
+                    {{ form.img5 }}
+                </div>                              
+                <div class="my-4 w-[48%]">            
+                    {{ form.img6 }}
+                </div>                              
+                <div class="my-4 w-[48%]">            
+                    {{ form.img7 }}
+                </div>                                       
+                <div class="my-4 w-[48%]">            
+                    {{ form.img8 }}
                 </div>            
             </div>                
             <div class="my-4 w-full">            

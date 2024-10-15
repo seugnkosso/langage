@@ -1,0 +1,40 @@
+{% extends "core/base.html" %}
+
+
+{% block content %}
+<div class="">
+    <div class="flex justify-between gap-4 items-center">
+        <div class="w-[25%] text-right">
+            <p class="mb-4">Libelle : <span class="font-bold text-sm my-4">{{estate.libel}}</span></p>
+            <p class="mb-4">Description : <span class="font-bold text-sm my-4">{{estate.description}}</span></p>
+            <p class="mb-4">Tarif : <span class="font-bold text-sm my-4">{{estate.price}}Fr</span></p>
+            <p class="mb-4">Etat : <span class="font-bold text-sm my-4">{{estate.state}}</span></p>
+        </div>
+        <div class="w-[50%]  h-[35rem] mb-4  cursor-pointer " id="detClick">
+            <img id="baseImg" class=" rounded-lg shadow-lg object-contain object-center w-full h-full" src=" {% if estate.img1 %} {{ estate.img1.url }} {% else %} ../../../../static/media/null.avif {% endif %}" alt="">
+        </div>
+        <div class="w-[25%]">
+            <p class="font-bold text-xl">Proprietaire :</p>
+            <p class="mb-4">nom : <span class="font-bold text-sm my-4">{{estate.ow.full_name}}</span></p>
+            <p class="mb-4">numero : <span class="font-bold text-sm my-4">{{estate.ow.tel}}</span></p>
+            <p class="mb-4">mail : <span class="font-bold text-sm my-4">{{estate.ow.email}}</span></p>
+            <p class="font-bold text-xl">Address :</p>
+            <p class="mb-4">Commune : <span class="font-bold text-sm my-4">{{estate.addres.municipality}}</span></p>            
+            <p class="mb-4">Quartier : <span class="font-bold text-sm my-4">{{estate.addres.neighborhood}}</span></p>            
+            <p class="mb-4">Rue : <span class="font-bold text-sm my-4">{{estate.addres.street}}</span></p>            
+        </div>
+
+    </div>
+    <div class="flex gap-2 w-[10%] mx-auto justify-center items-center">
+        <img class=" imgListDet rounded-lg shadow-lg object-contain w-full h-full" src=" {% if estate.img1 %} {{ estate.img1.url }} {% else %} ../../../../static/media/null.avif {% endif %}" alt="">
+        <img class=" imgListDet rounded-lg shadow-lg object-contain w-full h-full" src=" {% if estate.img2 %} {{ estate.img2.url }} {% else %} ../../../../static/media/null.avif {% endif %}" alt="">
+        <img class=" imgListDet rounded-lg shadow-lg object-contain w-full h-full" src=" {% if estate.img3 %} {{ estate.img3.url }} {% else %} ../../../../static/media/null.avif {% endif %}" alt="">
+        <img class=" imgListDet rounded-lg shadow-lg object-contain w-full h-full" src=" {% if estate.img4 %} {{ estate.img4.url }} {% else %} ../../../../static/media/null.avif {% endif %}" alt="">
+        <img class=" imgListDet rounded-lg shadow-lg object-contain w-full h-full" src=" {% if estate.img5 %} {{ estate.img5.url }} {% else %} ../../../../static/media/null.avif {% endif %}" alt="">
+        <img class=" imgListDet rounded-lg shadow-lg object-contain w-full h-full" src=" {% if estate.img6 %} {{ estate.img6.url }} {% else %} ../../../../static/media/null.avif {% endif %}" alt="">
+        <img class=" imgListDet rounded-lg shadow-lg object-contain w-full h-full" src=" {% if estate.img7 %} {{ estate.img7.url }} {% else %} ../../../../static/media/null.avif {% endif %}" alt="">
+        <img class=" imgListDet rounded-lg shadow-lg object-contain w-full h-full" src=" {% if estate.img8 %} {{ estate.img8.url }} {% else %} ../../../../static/media/null.avif {% endif %}" alt="">
+    </div>
+</div>
+{% endblock content %}
+    
