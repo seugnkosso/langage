@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-q0hy5qb@3ptw8)8h65b0pc^86fxc8!x$8elx4#w(77&cy9pa%&
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'agile-dusk-63235-4092c5496bcb.herokuapp.com/',
+    'agile-dusk-63235-4092c5496bcb.herokuapp.com',
 ]
 
 
