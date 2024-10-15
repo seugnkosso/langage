@@ -26,6 +26,20 @@
 
 // Address JS off 
 
+// Real estate JS ON
+
+{
+
+    const inputsearch_Estate = document.querySelector('#search_Estate');
+    if(inputsearch_Estate){
+        inputsearch_Estate.addEventListener("change",(event)=>{
+            inputFiltreAsynchrone(event,inputsearch_Estate);
+        })
+    }   
+}
+
+// Real estate JS off 
+
 
 
 function inputFiltreAsynchrone(event,input){

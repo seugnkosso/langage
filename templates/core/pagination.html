@@ -1,8 +1,6 @@
 {% if page_obj.paginator.num_pages > 1 %}
-<nav class="mt-5 flex items-center justify-between text-sm" aria-label="Page navigation example">
-    <p>
-    Showing page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}        
-    </p>
+<nav class="mt-5 flex items-center justify-end text-sm" aria-label="Page navigation example">
+    
 
     <ul class="list-style-none flex">
         
@@ -10,7 +8,7 @@
         <li>
             <a
             class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-            href="?p={{page_obj.previous_page_number}}&tel={{telClient}}">
+            href="?p={{page_obj.previous_page_number}}&tel={{telClient}}&search_Estate={{search_Estate}}">
             Previous
             </a>
         </li>   
@@ -24,14 +22,14 @@
         {% if page_obj.number == i %}
             <a
             class="relative block rounded bg-blue-100 px-3 py-1.5 text-sm font-medium text-blue-700 transition-all duration-300"
-            href="?p={{i}}&tel={{telClient}}"
+            href="?p={{i}}&tel={{telClient}}&search_Estate={{search_Estate}}"
             >
             {{ i }}              
             </a>                    
         {% else %}                    
             <a
             class="relative block rounded bg-white px-3 py-1.5 text-sm font-medium text-blue-700 transition-all duration-300"
-            href="?p={{i}}&tel={{telClient}}"
+            href="?p={{i}}&tel={{telClient}}&search_Estate={{search_Estate}}"
             >
             {{ i }}              
             </a>
@@ -43,7 +41,7 @@
     <li>
         <a
         class="relative block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:text-white dark:hover:bg-neutral-700 dark:hover:text-white"
-        href="?p={{page_obj.next_page_number}}&tel={{telClient}}"
+        href="?p={{page_obj.next_page_number}}&tel={{telClient}}&search_Estate={{search_Estate}}"
         >
         Next
         </a>

@@ -52,7 +52,7 @@ class OwnerAdmin(admin.ModelAdmin):
 class RentalAdmin(admin.ModelAdmin):
     list_display = [
                     'price',
-                    'ten',
+                    'tenant',
                     'real_e',
                     ]
     

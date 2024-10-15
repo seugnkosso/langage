@@ -5,7 +5,7 @@
   <div class="flex w-full flex-wrap items-center justify-between px-3">
     <div class="ms-4 flex w-full items-center justify-between">
       <div class="">
-        <a class="text-2xl text-white" href="#">Agence Immobilière</a>
+        <a class="text-2xl text-white" href="{% url 'real_estateList' %}">Agence Immobilière</a>
       </div>
       <div class="">
         <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white w-[3rem] h-[3rem] bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
@@ -26,6 +26,9 @@
                 </li>
                 <li>
                   <a href="{% url 'real_estateList' %}" class="block active:bg-blue-800 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Biens</a>
+                </li>
+                <li>
+                  <a href="{% url 'rentalList' %}" class="block active:bg-blue-800 px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">locations</a>
                 </li>
               </ul>
           </div>

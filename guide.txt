@@ -7,3 +7,10 @@
 
 -----creer et modifier 
 locataire - proprietaire - address 
+
+
+
+
+
+--------creer biens
+
