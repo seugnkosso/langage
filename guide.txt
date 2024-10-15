@@ -11,6 +11,7 @@ locataire - proprietaire - address
 
 
 
+----------declencher le programme avec 
+--py manage.py runserver 192.168.1.90:900
 
---------creer biens
 
