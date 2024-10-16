@@ -10,9 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
-import environ
-env = environ.Env()
-environ.Env.read_env()
+# import environ
+# env = environ.Env()
+# environ.Env.read_env()
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,10 +26,10 @@ TEMPLATES_DIR = BASE_DIR / 'templates'
 SECRET_KEY = 'django-insecure-q0hy5qb@3ptw8)8h65b0pc^86fxc8!x$8elx4#w(77&cy9pa%&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    'agile-dusk-63235-4092c5496bcb.herokuapp.com',
+    '192.168.1.90',
 ]
 
 
@@ -83,26 +83,26 @@ WSGI_APPLICATION = 'agence_immo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'HOST': env('STACKHERO_MARIADB_HOST'),
-    'PORT': env('STACKHERO_MARIADB_PORT'),
-    'OPTIONS': {
-    'ssl_mode': 'REQUIRED',
-    },
-    'NAME': 'root',
-    'USER': 'root',
-    'PASSWORD': env('STACKHERO_MARIADB_ROOT_PASSWORD')
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#     'HOST': env('STACKHERO_MARIADB_HOST'),
+#     'PORT': env('STACKHERO_MARIADB_PORT'),
+#     'OPTIONS': {
+#     'ssl_mode': 'REQUIRED',
+#     },
+#     'NAME': 'root',
+#     'USER': 'root',
+#     'PASSWORD': env('STACKHERO_MARIADB_ROOT_PASSWORD')
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
