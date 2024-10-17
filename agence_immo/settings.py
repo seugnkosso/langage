@@ -10,10 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
-# import environ
-# env = environ.Env()
-# environ.Env.read_env()
 from pathlib import Path
+import dj_database_url
+import django_heroku
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,10 +26,10 @@ TEMPLATES_DIR = BASE_DIR / 'templates'
 SECRET_KEY = 'django-insecure-q0hy5qb@3ptw8)8h65b0pc^86fxc8!x$8elx4#w(77&cy9pa%&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '192.168.1.90',
+    '*'
 ]
 
 
@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'core',
-    'compressor', 
 ]
 
 MIDDLEWARE = [
@@ -90,21 +89,7 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#     'ENGINE': 'django.db.backends.mysql',
-#     'HOST': env('STACKHERO_MARIADB_HOST'),
-#     'PORT': env('STACKHERO_MARIADB_PORT'),
-#     'OPTIONS': {
-#     'ssl_mode': 'REQUIRED',
-#     },
-#     'NAME': 'root',
-#     'USER': 'root',
-#     'PASSWORD': env('STACKHERO_MARIADB_ROOT_PASSWORD')
-#     }
-# }
-# Password validation
-# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -138,17 +123,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+django_heroku.settings(locals())
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-COMPRESS_ROOT = BASE_DIR / 'static'
-COMPRESS_ENABLED = True
-STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

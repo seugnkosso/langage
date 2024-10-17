@@ -1,0 +1,1 @@
+web gunicorn agence_immo.wsgi:application --log-file -
