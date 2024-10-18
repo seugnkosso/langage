@@ -45,3 +45,11 @@
 
 ---faire la migration
 -py manage.py makemigrations
+
+
+
+---remplir la view
+
+---creer les urls
+
+--tester avec postman
