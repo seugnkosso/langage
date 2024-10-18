@@ -66,9 +66,9 @@ class Owner(User):
         return self.full_name + " " + self.tel  
         
 class Address(SuperEntity):
-    municipality = models.CharField(max_length=255,unique=True,default="Sébikotane")    
-    neighborhood = models.CharField(max_length=255,unique=True)
-    street = models.CharField(max_length=255,unique=True)
+    municipality = models.CharField(max_length=255,default="Sébikotane")    
+    neighborhood = models.CharField(max_length=255)
+    street = models.CharField(max_length=255)
     
     def __str__(self) -> str:
         return self.municipality + " " + self.neighborhood + " " + self.street
