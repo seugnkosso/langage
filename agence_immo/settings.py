@@ -85,26 +85,26 @@ WSGI_APPLICATION = 'agence_immo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': {
-    'ENGINE': 'django.db.backends.mysql',
-    'HOST': env('STACKHERO_MARIADB_HOST'),
-    'PORT': env('STACKHERO_MARIADB_PORT'),
-    'OPTIONS': {
-    # 'ssl_mode': '',
-    },
-    'NAME': 'agenceimmo',
-    'USER': 'root',
-    'PASSWORD': env('STACKHERO_MARIADB_ROOT_PASSWORD')
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.mysql',
+#     'HOST': env('STACKHERO_MARIADB_HOST'),
+#     'PORT': env('STACKHERO_MARIADB_PORT'),
+#     'OPTIONS': {
+#     # 'ssl_mode': '',
+#     },
+#     'NAME': 'agenceimmo',
+#     'USER': 'root',
+#     'PASSWORD': env('STACKHERO_MARIADB_ROOT_PASSWORD')
+#     }
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
