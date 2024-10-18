@@ -1,0 +1,47 @@
+----------creer un projet 
+--installer python 
+
+--creer env 
+-py -m venv [nom venv]
+
+--installer django
+-pip install django
+
+---installer pymysql
+--pip install pymysql
+
+--creer un projet django 
+-django-admin createproject [nomProjet]
+
+--creer une application 
+-django-admin createapp [nom application]
+
+---mettre l'app creer dans les installed_apps
+
+--creer le model 
+
+--installer le cors 
+-pip installer django-cors-headears
+
+--insatall django rest
+-pip install djangorestframework
+
+--ajouter les cors et django-rest dans insatalled_apps
+
+--ajouter corsheaders dans middlewar
+
+--ajouter les proprieté de corsheader dans le settings
+
+---creer serializer.py dans l'app
+
+---installer dj-database_url
+--pip install dj_database_url
+
+---installer mysqlclient 
+-pip install mysqlclient
+
+--dj_database_url dans settings
+
+
+---faire la migration
+-py manage.py makemigrations
