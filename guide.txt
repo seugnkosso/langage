@@ -53,3 +53,20 @@
 ---creer les urls
 
 --tester avec postman
+
+
+--integrer angular 
+
+--installer scoop
+
+--installer nodeJs
+-scoop install nodejs
+
+--installer ng cli
+-npm install -g @angular/cli
+
+---creer projet angular
+-ng new [nom-projet]
+
+---generer un component
+--ng g c [nomComponent]
